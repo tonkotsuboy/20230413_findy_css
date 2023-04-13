@@ -1,0 +1,272 @@
+/* @theme kano */
+
+@import "default";
+
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@500;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Source+Code+Pro:wght@400;700&display=swap");
+
+/*
+https://raw.githubusercontent.com/rnd195/my-marp-themes/main/beamer.css
+を拡張したテーマ
+*/
+
+:root {
+  font-family: "Noto Sans JP", "游ゴシック Medium", YuGothic, YuGothicM,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --beamer-main: #0b949b;
+  --beamer-secondary: #000000;
+  --title-size: 60px;
+}
+
+a {
+  color: var(--beamer-secondary);
+}
+
+marp-pre {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+section {
+  padding: 2em 2em 0;
+  background-color: #ffffff;
+}
+
+header {
+  font-size: 0.6em;
+  /* this text-align is important */
+  position: absolute;
+  /* I don't like this absolute positioning, but it works */
+  top: 96.2%;
+  right: 0;
+  left: -51%;
+  width: 100%;
+  text-align: right;
+  color: white;
+}
+
+footer {
+  font-size: 22px !important;
+  top: auto;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: currentColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #141414;
+}
+
+/* only apply to the first occurrence of h1 */
+h1:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0;
+  text-indent: 0.5em;
+  color: #ffffff;
+  border-top: 0.3em solid var(--beamer-main);
+  background-color: var(--beamer-main);
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 100% !important;
+  line-height: 1.5 !important;
+  margin-top: 1rem !important;
+  background-color: transparent;
+}
+
+/* formatting page numbers  */
+section::after {
+  font-size: 0.6em;
+  /* https://github.com/yhatt/marp/issues/263 */
+  position: absolute;
+  top: 96.2%;
+  right: 0;
+  left: -0.5em;
+  width: 100%;
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  text-align: right;
+  color: white;
+}
+
+/* the "center" keyword centers the image - may break, careful */
+img[alt~="center"] {
+  display: block;
+  margin: 24px auto 0;
+}
+
+img[alt~="center_with_text"] {
+  display: block;
+  margin: 0 auto 0;
+}
+
+img[alt~="border"] {
+  border: 1px solid #aaa;
+}
+
+section.only-text ul {
+  font-size: 32px;
+  line-height: 2;
+}
+
+section.only-text table {
+  font-size: 32px;
+  line-height: 2;
+  margin: 0 auto;
+}
+
+section.chapter {
+  display: grid;
+
+  padding: 0;
+  text-align: center;
+  background-image: url(./theme/images/chapter_bg.svg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 200px auto;
+  place-content: center;
+}
+
+section.chapter header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  top: 0;
+  right: 0;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 110px;
+  text-align: center;
+}
+
+section.chapter > h1 {
+  font-size: var(--title-size);
+  line-height: 1.7;
+  position: relative;
+  height: auto;
+  text-align: center;
+  color: var(--beamer-secondary);
+  border: none;
+  background-color: transparent;
+}
+
+section.message {
+  display: grid;
+  padding: 0;
+  text-align: center;
+  border: 15px solid var(--beamer-main);
+  place-content: center;
+}
+
+section.message > h1 {
+  font-size: var(--title-size);
+  line-height: 1.7;
+  position: relative;
+  height: auto;
+  text-align: center;
+  color: var(--beamer-secondary);
+  border: none;
+  background-color: transparent;
+}
+
+section.title::before {
+  width: 120px;
+  height: 120px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 60px);
+  background-color: var(--beamer-main);
+  clip-path: polygon(50% 50%, 0 0, 100% 0);
+}
+
+section.title > h1 {
+  font-size: var(--title-size);
+  top: calc(50% - 110px);
+  display: grid;
+  place-items: center;
+  height: 220px;
+  text-align: center;
+  line-height: 1.7;
+  color: var(--beamer-secondary);
+  border: none;
+  /* border: 1px solid red !important; */
+  background-color: transparent;
+}
+
+/* remake this to be positioned with respect to h1 */
+section.title > p {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  font-size: 46px;
+  text-align: center;
+}
+
+section.inline-demo {
+  padding: 0;
+}
+
+section.inline-demo > footer {
+  font-size: 1rem;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #fff;
+}
+
+section.external-demo {
+  display: grid;
+  padding: 0;
+  text-align: center;
+  background-image: url(./theme/images/black_bg.png);
+  place-content: center;
+}
+
+section.external-demo h1 {
+  font-family: "Hind", sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  color: white;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 32px;
+}
+
+section.external-demo :is(p, a) {
+  color: white;
+}
+
+section.finish h1 {
+  font-size: 40px;
+  line-height: 1.7;
+  position: absolute;
+  top: 550px;
+  height: auto;
+  font-weight: normal;
+  text-align: center;
+  color: white !important;
+  border: none;
+  background-color: transparent;
+}
+
+section.finish h1 a {
+  color: currentColor;
+}
