@@ -3,6 +3,14 @@ marp: true
 theme: kano
 ---
 
+
+<!--
+_class: top
+-->
+
+
+# 2023年モダンCSSの最新トレンド
+
 ![bg](images/title.png)
 
 ---

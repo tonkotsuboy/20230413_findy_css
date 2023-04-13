@@ -31,6 +31,10 @@ section {
   background-color: #ffffff;
 }
 
+section.top h1 {
+  visibility: hidden;
+}
+
 header {
   font-size: 0.6em;
   /* this text-align is important */
