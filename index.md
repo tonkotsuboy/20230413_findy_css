@@ -88,7 +88,7 @@ _footer: https://www.messenger.com/
 
 ---
 
-# 従来：Illustrator 等で画像を作っていた
+# 従来: Illustrator 等で画像を作っていた
 
 ![w:900 center](images/clip_photoshop.png)
 
@@ -136,7 +136,7 @@ backdrop-filter
 
 ---
 
-# 従来：Photoshop 等で画像を作成していた
+# 従来: Photoshop 等で画像を作成していた
 
 ![w:1100 center](images/filter_photoshop.png)
 
@@ -202,7 +202,7 @@ _class: only-text
 # 従来: 「未満」や「より大きい」の表現ができない
 
 - `min-width`: ○○px 以上
-- `min-width`: ○○px 以下
+- `max-width`: ○○px 以下
 
 ---
 
@@ -287,7 +287,7 @@ _class: title
 
 ---
 
-# 従来：padding ハック
+# 従来: `padding` ハック
 
 ```css
 .box::before {
@@ -306,7 +306,7 @@ _class: title
 
 ---
 
-# 現在：`aspect-ratio` プロパティ
+# 現在: `aspect-ratio` プロパティ
 
 ```css
 .item {
@@ -352,7 +352,7 @@ _class: inline-demo
 
 ---
 
-# 従来：JavaScript を使っていた
+# 従来: JavaScript を使っていた
 
 ```js
 const carousel = document.querySelector(".carousel");
@@ -410,7 +410,7 @@ scroll-behavior
 
 ---
 
-# 従来：JavaScript で実装していた
+# 従来: JavaScript で実装していた
 
 ```html
 <!-- HTML -->
@@ -427,7 +427,7 @@ new SmoothScroll('a[href*="#"]');
 
 ---
 
-# 現在：`scroll-behavior` で実装できる
+# 現在: `scroll-behavior` で実装できる
 
 ```css
 /* CSS */
@@ -759,7 +759,7 @@ _class: only-text
 
 - 子要素に応じて親のスタイルを変えられる `:has()`
 - CSS のネスト
-- 石積みレイアウト CSS Grid の `masonry`
+- レンガ状レイアウト CSS Grid の `masonry`
 
 ---
 
